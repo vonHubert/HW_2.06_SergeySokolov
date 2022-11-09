@@ -18,7 +18,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func logInButtonTapped() {
         guard loginTextField.text == user.login, passwordTextField.text == user.password else {
-            wrongCredentialsMessage(textField: passwordTextField)
+            showMessage(
+                title: "ERROR:",
+                message: "Invalid login or password.",
+                textField: passwordTextField
+            )
             return
         }
     }
@@ -39,14 +43,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func remindCredentials(_ sender: UIButton) {
-        sender.tag == 0 ? remindLoginMessage() : remindPasswordMessage()
+        sender.tag == 0
+        ? showMessage(title: "Your login is:", message: "\(user.login)")
+        : showMessage(title: "Your password is:", message: "\(user.password)")
     }
     
-
-    // мне пришлось разделить сообщения на разные функции т.к. не получилось заставить работать одну общую функцию с параметрами, иначе не успевал закончить ДЗ. Знаю что это не правильно ( 1й модуль еще...
-    
-    private func wrongCredentialsMessage(textField: UITextField? = nil) {
-        let alert = UIAlertController(title: "ERROR:", message: "Invalid login or password.", preferredStyle: .alert)
+    private func showMessage(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""
         }
@@ -54,23 +57,9 @@ class LoginViewController: UIViewController {
         present(alert, animated: false)
     }
     
-    private func remindLoginMessage(textField: UITextField? = nil) {
-        let alert = UIAlertController(title: "Your login is:", message: "\(user.login)", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            textField?.text = ""
-        }
-        alert.addAction(okAction)
-        present(alert, animated: false)
-    }
     
-    private func remindPasswordMessage(textField: UITextField? = nil) {
-        let alert = UIAlertController(title: "Your password is:", message: "\(user.password)", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            textField?.text = ""
-        }
-        alert.addAction(okAction)
-        present(alert, animated: false)
-    }
+    
+    
 }
     
 
