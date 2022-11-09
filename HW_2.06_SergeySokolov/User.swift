@@ -8,15 +8,27 @@
 import Foundation
 
 struct User {
-    let login = "S.Sokolov"
-    let password = "1111"
     
-    let name = "Sergey"
-    let surname = "Sokolov"
-    let birthYear = 1988
-    let birthMonth = 2
-    let birthDay = 29
+    let login: String
+    let password: String
     
+    let name: String
+    let surname: String
+    let birthYear: Int
+    let birthMonth: Int
+    let birthDay: Int
+    
+    static func getUserData() -> User {
+        User(
+            login: "S.Sokolov",
+            password: "1111",
+            name: "Sergey",
+            surname: "Sokolov",
+            birthYear: 1988,
+            birthMonth: 2,
+            birthDay: 29
+        )
+    }
 }
 
 struct Car {

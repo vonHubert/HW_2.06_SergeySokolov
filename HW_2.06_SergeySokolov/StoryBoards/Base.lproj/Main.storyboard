@@ -117,9 +117,8 @@
                                     <segue destination="6Fg-f8-9H2" kind="unwind" unwindAction="unwindSegueWithSegue:" id="dGJ-5f-dHO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="personalInfo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-bZ-0Tg">
-                                <rect key="frame" x="123" y="424" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="personalInfo" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-bZ-0Tg">
+                                <rect key="frame" x="130.33333333333337" y="403.66666666666669" width="132.66666666666663" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -133,6 +132,8 @@
                             <constraint firstItem="JyG-5q-H7V" firstAttribute="trailing" secondItem="o9i-qO-rZz" secondAttribute="trailing" constant="30" id="CG2-xL-grV"/>
                             <constraint firstItem="o9i-qO-rZz" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="ONM-oe-q1C"/>
                             <constraint firstItem="29D-P7-Wqd" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="aUV-nG-eAd"/>
+                            <constraint firstItem="h1f-bZ-0Tg" firstAttribute="top" secondItem="o9i-qO-rZz" secondAttribute="bottom" constant="60" id="akb-vN-Z6B"/>
+                            <constraint firstItem="h1f-bZ-0Tg" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="ffk-IB-QQo"/>
                             <constraint firstItem="29D-P7-Wqd" firstAttribute="top" secondItem="JyG-5q-H7V" secondAttribute="top" constant="30" id="se4-ww-tvD"/>
                         </constraints>
                     </view>
@@ -261,6 +262,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ryu-dx-t4J" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kxQ-mg-nmR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

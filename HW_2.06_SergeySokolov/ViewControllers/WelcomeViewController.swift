@@ -12,13 +12,13 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var personalInfo: UILabel!
     
-    var user = ""
+    var user = User.getUserData()
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Hello \(user.login)!"
-        personalInfo.text = "Name: "
+        personalInfo.text = "Name: \(user.name) \nSurname: \(user.surname) \nDate of birth: \(user.birthDay).\(user.birthMonth).\(user.birthYear)"
         
     }
     

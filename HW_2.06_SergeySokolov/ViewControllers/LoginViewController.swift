@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    let user = User()
+    private let user = User.getUserData()
     
     
     @IBAction func logInButtonTapped() {
@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user.login
+        welcomeVC.user = user
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {

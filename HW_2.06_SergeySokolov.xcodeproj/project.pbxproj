@@ -66,8 +66,7 @@
 		32112E3729184C3A00FF3152 /* HW_2.06_SergeySokolov */ = {
 			isa = PBXGroup;
 			children = (
-				32112E3829184C3A00FF3152 /* AppDelegate.swift */,
-				32112E3A29184C3A00FF3152 /* SceneDelegate.swift */,
+				32112E5B291C687700FF3152 /* App */,
 				32112E4E291AEA4600FF3152 /* ViewControllers */,
 				32112E54291C35E500FF3152 /* StoryBoards */,
 				32112E4129184C3C00FF3152 /* Assets.xcassets */,
@@ -96,6 +95,15 @@
 				32112E4329184C3C00FF3152 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		32112E5B291C687700FF3152 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				32112E3829184C3A00FF3152 /* AppDelegate.swift */,
+				32112E3A29184C3A00FF3152 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
