@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func logInButtonTapped() {
         guard loginTextField.text == user.login, passwordTextField.text == user.password else {
-            showMessage(textField: passwordTextField)
+            wrongCredentialsMessage(textField: passwordTextField)
             return
         }
     }
@@ -38,8 +38,36 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    private func showMessage(textField: UITextField? = nil) {
-        let alert = UIAlertController(title: "Invalid login or password.", message: "", preferredStyle: .alert)
+    @IBAction func remindLogin(_ sender: Any) {
+        remindLoginMessage()
+    }
+    
+    @IBAction func remindPassword(_ sender: Any) {
+      remindPasswordMessage()
+    }
+    
+    // 
+    
+    private func wrongCredentialsMessage(textField: UITextField? = nil) {
+        let alert = UIAlertController(title: "ERROR:", message: "Invalid login or password.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: false)
+    }
+    
+    private func remindLoginMessage(textField: UITextField? = nil) {
+        let alert = UIAlertController(title: "Your login is:", message: "\(user.login)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: false)
+    }
+    
+    private func remindPasswordMessage(textField: UITextField? = nil) {
+        let alert = UIAlertController(title: "Your password is:", message: "\(user.password)", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""
         }

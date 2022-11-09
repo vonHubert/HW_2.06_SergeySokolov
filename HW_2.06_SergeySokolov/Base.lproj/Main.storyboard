@@ -41,12 +41,37 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4Q-ru-P4q">
+                                <rect key="frame" x="30" y="401" width="333" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kv-xO-g7v">
+                                        <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Remind Login"/>
+                                        <connections>
+                                            <action selector="remindLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2db-R6-FW7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkY-XJ-IsK">
+                                        <rect key="frame" x="166.66666666666663" y="0.0" width="166.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Remind Password"/>
+                                        <connections>
+                                            <action selector="remindPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2P-IJ-W35"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0Oc-rh-7JK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="7fH-mc-iNc"/>
+                            <constraint firstItem="h4Q-ru-P4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dLc-di-RsO"/>
+                            <constraint firstItem="kkY-XJ-IsK" firstAttribute="top" secondItem="0Oc-rh-7JK" secondAttribute="bottom" constant="39.666666666666629" id="dj1-yV-xge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h4Q-ru-P4q" secondAttribute="trailing" constant="30" id="dpt-8v-MV3"/>
                             <constraint firstItem="0Oc-rh-7JK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="lRA-fg-UOM"/>
+                            <constraint firstItem="h4Q-ru-P4q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t5s-Ii-J2K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Oc-rh-7JK" secondAttribute="trailing" constant="25" id="xrp-A6-Fod"/>
                         </constraints>
                     </view>
