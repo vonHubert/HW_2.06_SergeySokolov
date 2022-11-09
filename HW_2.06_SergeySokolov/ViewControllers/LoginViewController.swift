@@ -13,16 +13,11 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    /*    override func viewDidLoad() {
-     super.viewDidLoad()
-     }
-     */
+    let user = User()
     
-    private let user = "1"
-    private let password = "1"
     
     @IBAction func logInButtonTapped() {
-        guard loginTextField.text == user, passwordTextField.text == password else {
+        guard loginTextField.text == user.login, passwordTextField.text == user.password else {
             showMessage(textField: passwordTextField)
             return
         }
@@ -30,7 +25,7 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
+        welcomeVC.user = user.login
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
