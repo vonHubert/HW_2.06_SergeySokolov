@@ -15,6 +15,9 @@
 		32112E4529184C3C00FF3152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32112E4329184C3C00FF3152 /* LaunchScreen.storyboard */; };
 		32112E50291C013000FF3152 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32112E4F291C013000FF3152 /* WelcomeViewController.swift */; };
 		32112E52291C092000FF3152 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32112E51291C092000FF3152 /* User.swift */; };
+		32112E56291C3B1000FF3152 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32112E55291C3B1000FF3152 /* EducationViewController.swift */; };
+		32112E58291C3B2E00FF3152 /* CareerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32112E57291C3B2E00FF3152 /* CareerViewController.swift */; };
+		32112E5A291C3B3E00FF3152 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32112E59291C3B3E00FF3152 /* VehiclesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		32112E4629184C3C00FF3152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32112E4F291C013000FF3152 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		32112E51291C092000FF3152 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		32112E55291C3B1000FF3152 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		32112E57291C3B2E00FF3152 /* CareerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewController.swift; sourceTree = "<group>"; };
+		32112E59291C3B3E00FF3152 /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 			children = (
 				32112E3C29184C3B00FF3152 /* LoginViewController.swift */,
 				32112E4F291C013000FF3152 /* WelcomeViewController.swift */,
+				32112E55291C3B1000FF3152 /* EducationViewController.swift */,
+				32112E57291C3B2E00FF3152 /* CareerViewController.swift */,
+				32112E59291C3B3E00FF3152 /* VehiclesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -160,7 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32112E58291C3B2E00FF3152 /* CareerViewController.swift in Sources */,
+				32112E5A291C3B3E00FF3152 /* VehiclesViewController.swift in Sources */,
 				32112E3D29184C3B00FF3152 /* LoginViewController.swift in Sources */,
+				32112E56291C3B1000FF3152 /* EducationViewController.swift in Sources */,
 				32112E50291C013000FF3152 /* WelcomeViewController.swift in Sources */,
 				32112E3929184C3A00FF3152 /* AppDelegate.swift in Sources */,
 				32112E52291C092000FF3152 /* User.swift in Sources */,
