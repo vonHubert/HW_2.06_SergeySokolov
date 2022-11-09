@@ -63,9 +63,8 @@
 				32112E3829184C3A00FF3152 /* AppDelegate.swift */,
 				32112E3A29184C3A00FF3152 /* SceneDelegate.swift */,
 				32112E4E291AEA4600FF3152 /* ViewControllers */,
-				32112E3E29184C3B00FF3152 /* Main.storyboard */,
+				32112E54291C35E500FF3152 /* StoryBoards */,
 				32112E4129184C3C00FF3152 /* Assets.xcassets */,
-				32112E4329184C3C00FF3152 /* LaunchScreen.storyboard */,
 				32112E4629184C3C00FF3152 /* Info.plist */,
 				32112E51291C092000FF3152 /* User.swift */,
 			);
@@ -79,6 +78,15 @@
 				32112E4F291C013000FF3152 /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		32112E54291C35E500FF3152 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				32112E3E29184C3B00FF3152 /* Main.storyboard */,
+				32112E4329184C3C00FF3152 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

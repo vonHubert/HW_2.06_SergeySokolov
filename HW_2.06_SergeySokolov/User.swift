@@ -7,8 +7,8 @@
 
 import Foundation
 
-class User {
-    let login = "1"
-    let password = "1"
+struct User {
+    let login = "S.Sokolov"
+    let password = "1111"
     
 }
