@@ -18,19 +18,32 @@ class LoginViewController: UIViewController {
      }
      */
     
-    private let user = "SergeySokolov"
-    private let password = "Emden1914"
+    private let user = "1"
+    private let password = "1"
     
     @IBAction func logInButtonTapped() {
         guard loginTextField.text == user, passwordTextField.text == password else {
             showMessage(textField: passwordTextField)
-            
             return
         }
-        //  performSegue(withIdentifier: "showWelcomeView", sender: nil)
     }
     
-   private func showMessage(textField: UITextField? = nil) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.user = user
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        loginTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    private func showMessage(textField: UITextField? = nil) {
         let alert = UIAlertController(title: "Invalid login or password.", message: "", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""

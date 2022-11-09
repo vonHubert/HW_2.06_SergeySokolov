@@ -36,6 +36,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="LOG IN"/>
                                         <connections>
                                             <action selector="logInButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="jyB-FX-kW9"/>
+                                            <segue destination="b9j-if-Zml" kind="presentation" identifier="loginScreenSegue" modalPresentationStyle="fullScreen" id="9u3-yM-xZa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -61,13 +62,13 @@
         <!--Welcome View Controller-->
         <scene sceneID="rqo-sl-Zbs">
             <objects>
-                <viewController id="b9j-if-Zml" customClass="WelcomeViewController" sceneMemberID="viewController">
+                <viewController id="b9j-if-Zml" customClass="WelcomeViewController" customModule="HW_2_06_SergeySokolov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HNv-1G-Lbb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="o9i-qO-rZz">
-                                <rect key="frame" x="30" y="209" width="333" height="137.66666666666663"/>
+                                <rect key="frame" x="30" y="209" width="333" height="241"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login succesful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pe-cp-LXp">
                                         <rect key="frame" x="79.000000000000014" y="0.0" width="175.33333333333337" height="31.333333333333332"/>
@@ -75,10 +76,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv3-av-8nw">
+                                        <rect key="frame" x="60.333333333333329" y="103.33333333333331" width="212.66666666666669" height="31.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29D-P7-Wqd">
-                                        <rect key="frame" x="118" y="103.33333333333331" width="97.333333333333314" height="34.333333333333343"/>
+                                        <rect key="frame" x="118" y="206.66666666666669" width="97.333333333333314" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="LOG OUT"/>
+                                        <connections>
+                                            <segue destination="6Fg-f8-9H2" kind="unwind" unwindAction="unwindSegueWithSegue:" id="dGJ-5f-dHO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -92,8 +102,12 @@
                             <constraint firstItem="o9i-qO-rZz" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="ONM-oe-q1C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Dv3-av-8nw" id="Blz-85-L3g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkQ-TV-kez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6Fg-f8-9H2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="816" y="-27"/>
         </scene>
