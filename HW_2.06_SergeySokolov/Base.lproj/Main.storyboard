@@ -49,15 +49,15 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Remind Login"/>
                                         <connections>
-                                            <action selector="remindLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2db-R6-FW7"/>
+                                            <action selector="remindCredentials:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JdA-F3-CtA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkY-XJ-IsK">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkY-XJ-IsK">
                                         <rect key="frame" x="166.66666666666663" y="0.0" width="166.33333333333337" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Remind Password"/>
                                         <connections>
-                                            <action selector="remindPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2P-IJ-W35"/>
+                                            <action selector="remindCredentials:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsZ-lS-NuQ"/>
                                         </connections>
                                     </button>
                                 </subviews>

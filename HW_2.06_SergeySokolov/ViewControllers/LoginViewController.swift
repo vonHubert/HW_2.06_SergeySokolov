@@ -38,15 +38,12 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func remindLogin(_ sender: Any) {
-        remindLoginMessage()
+    @IBAction func remindCredentials(_ sender: UIButton) {
+        sender.tag == 0 ? remindLoginMessage() : remindPasswordMessage()
     }
     
-    @IBAction func remindPassword(_ sender: Any) {
-      remindPasswordMessage()
-    }
-    
-    // 
+
+    // мне пришлось разделить сообщения на разные функции т.к. не получилось заставить работать одну общую функцию с параметрами, иначе не успевал закончить ДЗ. Знаю что это не правильно ( 1й модуль еще...
     
     private func wrongCredentialsMessage(textField: UITextField? = nil) {
         let alert = UIAlertController(title: "ERROR:", message: "Invalid login or password.", preferredStyle: .alert)
