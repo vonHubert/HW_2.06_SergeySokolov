@@ -118,8 +118,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="personalInfo" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-bZ-0Tg">
-                                <rect key="frame" x="130.33333333333337" y="403.66666666666669" width="132.66666666666663" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="30" y="403.66666666666669" width="333" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -131,8 +131,10 @@
                             <constraint firstItem="o9i-qO-rZz" firstAttribute="leading" secondItem="JyG-5q-H7V" secondAttribute="leading" constant="30" id="9yg-Jh-1ya"/>
                             <constraint firstItem="JyG-5q-H7V" firstAttribute="trailing" secondItem="o9i-qO-rZz" secondAttribute="trailing" constant="30" id="CG2-xL-grV"/>
                             <constraint firstItem="o9i-qO-rZz" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="ONM-oe-q1C"/>
+                            <constraint firstItem="JyG-5q-H7V" firstAttribute="trailing" secondItem="h1f-bZ-0Tg" secondAttribute="trailing" constant="30" id="Qve-qO-2kU"/>
                             <constraint firstItem="29D-P7-Wqd" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="aUV-nG-eAd"/>
                             <constraint firstItem="h1f-bZ-0Tg" firstAttribute="top" secondItem="o9i-qO-rZz" secondAttribute="bottom" constant="60" id="akb-vN-Z6B"/>
+                            <constraint firstItem="h1f-bZ-0Tg" firstAttribute="leading" secondItem="JyG-5q-H7V" secondAttribute="leading" constant="30" id="cjG-N7-zYu"/>
                             <constraint firstItem="h1f-bZ-0Tg" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="ffk-IB-QQo"/>
                             <constraint firstItem="29D-P7-Wqd" firstAttribute="top" secondItem="JyG-5q-H7V" secondAttribute="top" constant="30" id="se4-ww-tvD"/>
                         </constraints>
@@ -151,7 +153,7 @@
         <!--Education Page-->
         <scene sceneID="hJE-cW-vMg">
             <objects>
-                <viewController id="9Cc-w4-1uh" sceneMemberID="viewController">
+                <viewController id="9Cc-w4-1uh" customClass="EducationViewController" customModule="HW_2_06_SergeySokolov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ECM-Yx-GPQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,9 +164,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="educationInfo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smQ-te-dwe">
-                                <rect key="frame" x="123" y="177.66666666666666" width="147" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="educationInfo" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smQ-te-dwe">
+                                <rect key="frame" x="30" y="177.66666666666666" width="333" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -174,11 +176,18 @@
                         <constraints>
                             <constraint firstItem="smQ-te-dwe" firstAttribute="centerX" secondItem="ECM-Yx-GPQ" secondAttribute="centerX" id="38j-Ch-xGB"/>
                             <constraint firstItem="whn-qs-IFp" firstAttribute="top" secondItem="c87-uT-akW" secondAttribute="top" constant="30" id="Fju-oS-f7o"/>
+                            <constraint firstItem="c87-uT-akW" firstAttribute="trailing" secondItem="smQ-te-dwe" secondAttribute="trailing" constant="30" id="I9f-Ak-OKI"/>
                             <constraint firstItem="smQ-te-dwe" firstAttribute="top" secondItem="whn-qs-IFp" secondAttribute="bottom" constant="30" id="NiY-TY-Sjz"/>
                             <constraint firstItem="whn-qs-IFp" firstAttribute="centerX" secondItem="ECM-Yx-GPQ" secondAttribute="centerX" id="aNN-e1-b3n"/>
+                            <constraint firstItem="smQ-te-dwe" firstAttribute="top" secondItem="whn-qs-IFp" secondAttribute="bottom" constant="30" id="dUa-QH-exf"/>
+                            <constraint firstItem="smQ-te-dwe" firstAttribute="centerX" secondItem="ECM-Yx-GPQ" secondAttribute="centerX" id="gse-Ru-Roi"/>
+                            <constraint firstItem="smQ-te-dwe" firstAttribute="leading" secondItem="c87-uT-akW" secondAttribute="leading" constant="30" id="uYG-TF-7yL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Education Page" image="2.circle.fill" catalog="system" id="vPG-Ov-wGL"/>
+                    <connections>
+                        <outlet property="educationDataLabel" destination="smQ-te-dwe" id="ksX-OE-HRR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeL-n0-Vdu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,7 +196,7 @@
         <!--Career Page-->
         <scene sceneID="LhG-Lz-RIQ">
             <objects>
-                <viewController id="5Cc-13-uAw" sceneMemberID="viewController">
+                <viewController id="5Cc-13-uAw" customClass="CareerViewController" customModule="HW_2_06_SergeySokolov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QhE-M8-Tvb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,9 +207,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="careerInfo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxX-s0-Oio">
-                                <rect key="frame" x="142.66666666666666" y="177.66666666666666" width="107.66666666666666" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="careerInfo" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxX-s0-Oio">
+                                <rect key="frame" x="30" y="177.66666666666666" width="333" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -210,11 +219,18 @@
                         <constraints>
                             <constraint firstItem="vxA-Zv-0Aq" firstAttribute="centerX" secondItem="QhE-M8-Tvb" secondAttribute="centerX" id="2Za-ly-0xM"/>
                             <constraint firstItem="RxX-s0-Oio" firstAttribute="centerX" secondItem="QhE-M8-Tvb" secondAttribute="centerX" id="Fd4-1U-ghx"/>
+                            <constraint firstItem="RxX-s0-Oio" firstAttribute="leading" secondItem="3GJ-kF-dyG" secondAttribute="leading" constant="30" id="Mw0-yn-JKF"/>
+                            <constraint firstItem="RxX-s0-Oio" firstAttribute="centerX" secondItem="QhE-M8-Tvb" secondAttribute="centerX" id="Wos-yC-07o"/>
                             <constraint firstItem="RxX-s0-Oio" firstAttribute="top" secondItem="vxA-Zv-0Aq" secondAttribute="bottom" constant="30" id="hnz-he-NYJ"/>
                             <constraint firstItem="vxA-Zv-0Aq" firstAttribute="top" secondItem="3GJ-kF-dyG" secondAttribute="top" constant="30" id="nAT-0g-x8V"/>
+                            <constraint firstItem="3GJ-kF-dyG" firstAttribute="trailing" secondItem="RxX-s0-Oio" secondAttribute="trailing" constant="30" id="vt2-SP-QAh"/>
+                            <constraint firstItem="RxX-s0-Oio" firstAttribute="top" secondItem="vxA-Zv-0Aq" secondAttribute="bottom" constant="30" id="xWy-FI-6vl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Career Page" image="3.circle.fill" catalog="system" id="1Hi-0p-7cc"/>
+                    <connections>
+                        <outlet property="careerDataLabel" destination="RxX-s0-Oio" id="E8I-gL-J1O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meo-oE-R7u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +239,7 @@
         <!--Vehicles-->
         <scene sceneID="Tzz-pT-JDr">
             <objects>
-                <viewController id="IA0-8b-YgZ" sceneMemberID="viewController">
+                <viewController id="IA0-8b-YgZ" customClass="VehiclesViewController" customModule="HW_2_06_SergeySokolov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="31C-6T-brJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,9 +250,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="carInfo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhz-jp-TEx">
-                                <rect key="frame" x="159.66666666666666" y="178" width="73.666666666666657" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="carInfo" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhz-jp-TEx">
+                                <rect key="frame" x="30" y="178" width="333" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -245,16 +261,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XwX-cH-UoH" firstAttribute="top" secondItem="aby-08-Mt7" secondAttribute="top" constant="30" id="308-xm-mMt"/>
+                            <constraint firstItem="Vhz-jp-TEx" firstAttribute="centerX" secondItem="31C-6T-brJ" secondAttribute="centerX" id="ASA-jK-Kze"/>
+                            <constraint firstItem="Vhz-jp-TEx" firstAttribute="leading" secondItem="aby-08-Mt7" secondAttribute="leading" constant="30" id="ODh-mn-95n"/>
                             <constraint firstItem="Vhz-jp-TEx" firstAttribute="centerX" secondItem="31C-6T-brJ" secondAttribute="centerX" id="RrS-wR-JPO"/>
                             <constraint firstItem="XwX-cH-UoH" firstAttribute="centerX" secondItem="31C-6T-brJ" secondAttribute="centerX" id="ZVz-W3-kYK"/>
                             <constraint firstItem="Vhz-jp-TEx" firstAttribute="top" secondItem="XwX-cH-UoH" secondAttribute="bottom" constant="30" id="dNz-vb-Bbj"/>
+                            <constraint firstItem="Vhz-jp-TEx" firstAttribute="top" secondItem="XwX-cH-UoH" secondAttribute="bottom" constant="30" id="h3A-Mf-xJP"/>
+                            <constraint firstItem="aby-08-Mt7" firstAttribute="trailing" secondItem="Vhz-jp-TEx" secondAttribute="trailing" constant="30" id="jrQ-iO-pcJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Vehicles" image="4.circle.fill" catalog="system" id="pKc-Id-GXT"/>
+                    <connections>
+                        <outlet property="vehicleDataLabel" destination="Vhz-jp-TEx" id="fzN-R3-lkU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nge-UC-orm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="662"/>
+            <point key="canvasLocation" x="3003.8167938931297" y="661.97183098591552"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ixO-Px-ld9">

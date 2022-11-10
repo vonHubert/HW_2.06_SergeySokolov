@@ -8,11 +8,14 @@
 import UIKit
 
 
-
-
 class EducationViewController: UIViewController {
+    
+    @IBOutlet var educationDataLabel: UILabel!
+    
+    var education = Education.getEducationData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        educationDataLabel.text = "University: \(education.university)\nDegree: \(education.degree)\n Graduation: \(education.graduationYear)"
     }
 }

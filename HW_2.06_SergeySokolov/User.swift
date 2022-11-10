@@ -32,20 +32,45 @@ struct User {
 }
 
 struct Car {
-    let brand = "Mercedes"
-    let model = "190e Cosworth"
-    let year = 1988
-    let power = 207
+    let brand: String
+    let model: String
+    let year: Int
+    let power: Int
+    
+    static func getCarData() -> Car {
+        Car(
+            brand: "Mercedes",
+            model: "190E 2.3 Cosworth",
+            year: 1988,
+            power: 207
+        )
+    }
 }
 
 struct Job {
-    let company = "InfoSecurity"
-    let department = "Sales department"
-    let position = "Financial sector sales head"
+    let company: String
+    let department: String
+    let position: String
+    
+    static func getJobData() -> Job {
+        Job(
+            company: "InfoSecurity",
+            department: "Sales department",
+            position: "Financial sector sales head"
+        )
+    }
 }
 
 struct Education {
-    let university = "London School of Economics"
-    let degree = "Masters Degree"
-    let graduationYear = "2011"
+    let university: String
+    let degree: String
+    let graduationYear: Int
+
+    static func getEducationData() -> Education {
+        Education(
+            university: "London School of Economics",
+            degree: "Masters Degree",
+            graduationYear: 2011
+        )
+    }
 }
