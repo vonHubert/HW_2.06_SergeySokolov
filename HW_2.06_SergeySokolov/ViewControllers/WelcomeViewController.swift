@@ -8,11 +8,12 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
+    // MARK: - IB Outlets:
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var personalInfo: UILabel!
     
-//    var user = User.getUserData()
+    // MARK: - Public properties
     var user: User!
     
     override func viewDidLoad() {
@@ -22,7 +23,5 @@ class WelcomeViewController: UIViewController {
         
     }
     
-
-  
-
+    
 }
