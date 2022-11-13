@@ -13,12 +13,12 @@ class VehiclesViewController: UIViewController {
     @IBOutlet var vehicleDataLabel: UILabel!
     
     // MARK: - Public properties
-    var car = Car.getCarData()
+    var user: User!
     
     // MARK: - Override Methods:
     override func viewDidLoad() {
         super.viewDidLoad()
-        vehicleDataLabel.text = "Brand: \(car.brand)\nModel: \(car.model)\nYear: \(car.year)\nPower: \(car.power) hp."
+        vehicleDataLabel.text = "Brand: \(user.person.car.brand)\nModel: \(user.person.car.model)\nYear: \(user.person.car.year)\nPower: \(user.person.car.power) hp."
         }
     
     

@@ -13,12 +13,12 @@ class CareerViewController: UIViewController {
     @IBOutlet var careerDataLabel: UILabel!
     
     // MARK: - Public properties
-    var job = Job.getJobData()
+    var user: User!
     
     // MARK: - Override Methods:
     override func viewDidLoad() {
         super.viewDidLoad()
-        careerDataLabel.text = "Company: \(job.company)\nDepartment: \(job.department)\nPosition: \(job.position)"
+        careerDataLabel.text = "Company: \(user.person.job.company)\nDepartment: \(user.person.job.department)\nPosition: \(user.person.job.position)"
     }
     
     

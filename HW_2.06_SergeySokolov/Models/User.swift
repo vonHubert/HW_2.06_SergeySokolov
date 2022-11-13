@@ -11,38 +11,53 @@ struct User {
     
     let login: String
     let password: String
-    
-    let name: String
-    let surname: String
-    let birthYear: Int
-    let birthMonth: Int
-    let birthDay: Int
+    let person: Person
     
     static func getUserData() -> User {
         User(
             login: "S.Sokolov",
             password: "1111",
+            person: Person.getPersonData()
+        )
+    }
+    
+}
+
+
+struct Person {
+    let name: String
+    let surname: String
+    let birthYear: Int
+    let birthMonth: Int
+    let birthDay: Int
+    let education: Education
+    let job: Job
+    let car: Car
+    
+    static func getPersonData() -> Person {
+        Person(
             name: "Sergey",
             surname: "Sokolov",
             birthYear: 1988,
             birthMonth: 2,
-            birthDay: 29
+            birthDay: 29,
+            education: Education.getEducationData(),
+            job: Job.getJobData(),
+            car: Car.getCarData()
         )
     }
 }
 
-struct Car {
-    let brand: String
-    let model: String
-    let year: Int
-    let power: Int
+struct Education {
+    let university: String
+    let degree: String
+    let graduationYear: Int
     
-    static func getCarData() -> Car {
-        Car(
-            brand: "Mercedes",
-            model: "190E 2.3 Cosworth",
-            year: 1988,
-            power: 207
+    static func getEducationData() -> Education {
+        Education(
+            university: "London School of Economics",
+            degree: "Masters Degree",
+            graduationYear: 2011
         )
     }
 }
@@ -61,16 +76,18 @@ struct Job {
     }
 }
 
-struct Education {
-    let university: String
-    let degree: String
-    let graduationYear: Int
-
-    static func getEducationData() -> Education {
-        Education(
-            university: "London School of Economics",
-            degree: "Masters Degree",
-            graduationYear: 2011
+struct Car {
+    let brand: String
+    let model: String
+    let year: Int
+    let power: Int
+    
+    static func getCarData() -> Car {
+        Car(
+            brand: "Mercedes",
+            model: "190E 2.3 Cosworth",
+            year: 1988,
+            power: 207
         )
     }
 }

@@ -19,7 +19,11 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Hello \(user.login)!"
-        personalInfo.text = "Name: \(user.name) \nSurname: \(user.surname) \nDate of birth: \(user.birthDay).\(user.birthMonth).\(user.birthYear)"
+        personalInfo.text = """
+Name: \(user.person.name)
+Surname: \(user.person.surname)
+Date of birth: \(user.person.birthDay).\(user.person.birthMonth).\(user.person.birthYear)
+"""
         
     }
     

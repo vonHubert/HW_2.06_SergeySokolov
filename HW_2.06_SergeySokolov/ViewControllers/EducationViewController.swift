@@ -13,12 +13,16 @@ class EducationViewController: UIViewController {
     @IBOutlet var educationDataLabel: UILabel!
     
     // MARK: - Public properties
-    var education = Education.getEducationData()
+    var user: User! //= Education.getEducationData()
     
     // MARK: - Override Methods:
     override func viewDidLoad() {
         super.viewDidLoad()
-        educationDataLabel.text = "University: \(education.university)\nDegree: \(education.degree)\n Graduation: \(education.graduationYear)"
+        educationDataLabel.text = """
+University: \(user.person.education.university)
+Degree: \(user.person.education.degree)
+Graduation: \(user.person.education.graduationYear)
+"""
     }
     
     
