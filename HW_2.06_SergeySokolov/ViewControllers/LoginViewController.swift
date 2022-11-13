@@ -28,9 +28,25 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                guard let userInfoVC = navigationVC.topViewController as? WelcomeViewController else {
+                    return
+                }
+                userInfoVC.user = user
+            }
+        }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.user = user
+//    }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         loginTextField.text = ""

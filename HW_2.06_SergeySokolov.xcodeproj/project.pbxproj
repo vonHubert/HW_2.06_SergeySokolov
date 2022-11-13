@@ -69,9 +69,9 @@
 				32112E5B291C687700FF3152 /* App */,
 				32112E4E291AEA4600FF3152 /* ViewControllers */,
 				32112E54291C35E500FF3152 /* StoryBoards */,
-				32112E4129184C3C00FF3152 /* Assets.xcassets */,
-				32112E4629184C3C00FF3152 /* Info.plist */,
-				32112E51291C092000FF3152 /* User.swift */,
+				32445AF929210CB600BF8136 /* Assets */,
+				32445AF829210BF700BF8136 /* Info */,
+				32445AF729210B0700BF8136 /* Models */,
 			);
 			path = HW_2.06_SergeySokolov;
 			sourceTree = "<group>";
@@ -104,6 +104,30 @@
 				32112E3A29184C3A00FF3152 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		32445AF729210B0700BF8136 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				32112E51291C092000FF3152 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		32445AF829210BF700BF8136 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				32112E4629184C3C00FF3152 /* Info.plist */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		32445AF929210CB600BF8136 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				32112E4129184C3C00FF3152 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87J7WT48DW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW_2.06_SergeySokolov/Info.plist;
+				INFOPLIST_FILE = HW_2.06_SergeySokolov/Info/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -365,7 +389,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87J7WT48DW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW_2.06_SergeySokolov/Info.plist;
+				INFOPLIST_FILE = HW_2.06_SergeySokolov/Info/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

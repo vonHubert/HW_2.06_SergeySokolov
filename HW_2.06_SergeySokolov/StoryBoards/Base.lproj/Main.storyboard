@@ -109,34 +109,34 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29D-P7-Wqd">
-                                <rect key="frame" x="148" y="89" width="97.333333333333314" height="34.333333333333343"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="LOG OUT"/>
-                                <connections>
-                                    <segue destination="6Fg-f8-9H2" kind="unwind" unwindAction="unwindSegueWithSegue:" id="dGJ-5f-dHO"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="personalInfo" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-bZ-0Tg">
                                 <rect key="frame" x="30" y="403.66666666666669" width="333" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29D-P7-Wqd">
+                                <rect key="frame" x="148" y="714.66666666666663" width="97.333333333333314" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LOG OUT"/>
+                                <connections>
+                                    <segue destination="6Fg-f8-9H2" kind="unwind" unwindAction="unwindSegueWithSegue:" id="dGJ-5f-dHO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JyG-5q-H7V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JyG-5q-H7V" firstAttribute="bottom" secondItem="29D-P7-Wqd" secondAttribute="bottom" constant="20" id="1vR-ja-nAu"/>
                             <constraint firstItem="o9i-qO-rZz" firstAttribute="top" secondItem="JyG-5q-H7V" secondAttribute="top" constant="150" id="6RD-lT-1uj"/>
                             <constraint firstItem="o9i-qO-rZz" firstAttribute="leading" secondItem="JyG-5q-H7V" secondAttribute="leading" constant="30" id="9yg-Jh-1ya"/>
                             <constraint firstItem="JyG-5q-H7V" firstAttribute="trailing" secondItem="o9i-qO-rZz" secondAttribute="trailing" constant="30" id="CG2-xL-grV"/>
                             <constraint firstItem="o9i-qO-rZz" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="ONM-oe-q1C"/>
                             <constraint firstItem="JyG-5q-H7V" firstAttribute="trailing" secondItem="h1f-bZ-0Tg" secondAttribute="trailing" constant="30" id="Qve-qO-2kU"/>
-                            <constraint firstItem="29D-P7-Wqd" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="aUV-nG-eAd"/>
                             <constraint firstItem="h1f-bZ-0Tg" firstAttribute="top" secondItem="o9i-qO-rZz" secondAttribute="bottom" constant="60" id="akb-vN-Z6B"/>
                             <constraint firstItem="h1f-bZ-0Tg" firstAttribute="leading" secondItem="JyG-5q-H7V" secondAttribute="leading" constant="30" id="cjG-N7-zYu"/>
+                            <constraint firstItem="29D-P7-Wqd" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="ezj-py-B4G"/>
                             <constraint firstItem="h1f-bZ-0Tg" firstAttribute="centerX" secondItem="HNv-1G-Lbb" secondAttribute="centerX" id="ffk-IB-QQo"/>
-                            <constraint firstItem="29D-P7-Wqd" firstAttribute="top" secondItem="JyG-5q-H7V" secondAttribute="top" constant="30" id="se4-ww-tvD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Start Screen" image="1.square.fill" catalog="system" id="fFk-sP-gFD"/>
@@ -179,7 +179,6 @@
                             <constraint firstItem="c87-uT-akW" firstAttribute="trailing" secondItem="smQ-te-dwe" secondAttribute="trailing" constant="30" id="I9f-Ak-OKI"/>
                             <constraint firstItem="smQ-te-dwe" firstAttribute="top" secondItem="whn-qs-IFp" secondAttribute="bottom" constant="30" id="NiY-TY-Sjz"/>
                             <constraint firstItem="whn-qs-IFp" firstAttribute="centerX" secondItem="ECM-Yx-GPQ" secondAttribute="centerX" id="aNN-e1-b3n"/>
-                            <constraint firstItem="smQ-te-dwe" firstAttribute="top" secondItem="whn-qs-IFp" secondAttribute="bottom" constant="30" id="dUa-QH-exf"/>
                             <constraint firstItem="smQ-te-dwe" firstAttribute="centerX" secondItem="ECM-Yx-GPQ" secondAttribute="centerX" id="gse-Ru-Roi"/>
                             <constraint firstItem="smQ-te-dwe" firstAttribute="leading" secondItem="c87-uT-akW" secondAttribute="leading" constant="30" id="uYG-TF-7yL"/>
                         </constraints>
@@ -224,7 +223,6 @@
                             <constraint firstItem="RxX-s0-Oio" firstAttribute="top" secondItem="vxA-Zv-0Aq" secondAttribute="bottom" constant="30" id="hnz-he-NYJ"/>
                             <constraint firstItem="vxA-Zv-0Aq" firstAttribute="top" secondItem="3GJ-kF-dyG" secondAttribute="top" constant="30" id="nAT-0g-x8V"/>
                             <constraint firstItem="3GJ-kF-dyG" firstAttribute="trailing" secondItem="RxX-s0-Oio" secondAttribute="trailing" constant="30" id="vt2-SP-QAh"/>
-                            <constraint firstItem="RxX-s0-Oio" firstAttribute="top" secondItem="vxA-Zv-0Aq" secondAttribute="bottom" constant="30" id="xWy-FI-6vl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Career Page" image="3.circle.fill" catalog="system" id="1Hi-0p-7cc"/>
@@ -266,7 +264,6 @@
                             <constraint firstItem="Vhz-jp-TEx" firstAttribute="centerX" secondItem="31C-6T-brJ" secondAttribute="centerX" id="RrS-wR-JPO"/>
                             <constraint firstItem="XwX-cH-UoH" firstAttribute="centerX" secondItem="31C-6T-brJ" secondAttribute="centerX" id="ZVz-W3-kYK"/>
                             <constraint firstItem="Vhz-jp-TEx" firstAttribute="top" secondItem="XwX-cH-UoH" secondAttribute="bottom" constant="30" id="dNz-vb-Bbj"/>
-                            <constraint firstItem="Vhz-jp-TEx" firstAttribute="top" secondItem="XwX-cH-UoH" secondAttribute="bottom" constant="30" id="h3A-Mf-xJP"/>
                             <constraint firstItem="aby-08-Mt7" firstAttribute="trailing" secondItem="Vhz-jp-TEx" secondAttribute="trailing" constant="30" id="jrQ-iO-pcJ"/>
                         </constraints>
                     </view>
